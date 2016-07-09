@@ -52,4 +52,6 @@ Run the following python class to test the bot.
 If it prints all the logs and exits with code 0, then the environment is set correctly.
 ```bash
 python SmartBotTest.py
+
 ``` 
+ 
