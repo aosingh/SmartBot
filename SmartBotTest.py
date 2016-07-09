@@ -1,5 +1,6 @@
 from SmartBot import Actions
 
+#initialize actions object
 actions = Actions()
 
 #Getting a user
