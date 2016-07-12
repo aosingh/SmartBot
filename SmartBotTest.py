@@ -8,7 +8,7 @@ user = actions.get_user(screen_name = '@awkvocado')
 print user
 
 #Create a list
-actions.create_list("Learning Twitter Day 2", "Knowing more about twitter")
+#actions.create_list("Learning Twitter Day 2", "Knowing more about twitter")
 
 # Get a list for any user
 userlist = actions.get_list(user, 'learning-twitter')
@@ -20,13 +20,31 @@ print "Running bot :@"+user.screen_name+\
               "\n Suscribers Count :"+str(userlist.subscriber_count)
 
 #Find 15 tweets in english language, hashtag '#Science' and retweet.
-actions.retweet_by_hashtag("#Science", n=10, lang='en')
+#actions.retweet("#Science", n=10, lang='en')
 
 #Find 15 tweets in english language, hashtag '#Science' and favorite them.
-actions.favour_by_hashtag("#Science", n=10, lang='en')
+#actions.favour("#Science", n=10, lang='en')
 
 #Find 15 tweets in english language, hashtag '#Science' and follow the users.
-actions.follow_by_hashtag("#Science", n=10  , lang='en')
+actions.follow("#Science", 'awkvocado', n=10  , lang='en')
+
+
+#Get Followers for a user
+for user in actions.get_followers('@awkvocado'):
+    print user.screen_name
+
+
+#Get Favorite tweets for a user
+for status in actions.get_favorites('@awkvocado'):
+    print status.id
+
+for tweets in actions.get_tweets(query="Science", n=26):
+    print tweets
+
+
+
+
+
 
 
 
