@@ -70,7 +70,6 @@ class Actions:
     def retweet(self, query, n=10, lang='en'):
         """
         Searches for tweets with the query string and retweets them.
-
         The number of tweets and the language can be specified as parameters
 
         :param query: search query string
@@ -96,7 +95,6 @@ class Actions:
     def favour(self, query, n=10, lang='en'):
         """
         Searches for tweets with the query string and favourites them.
-
         The number of tweets and the language can be specified as parameters
 
         :param query: search query string
@@ -196,7 +194,7 @@ class Actions:
         :return:
         """
         relevant_tweets = []
-        for tweet in relevant_tweets:
+        for tweet in tweets:
             if self.is_within_time(time):
                 relevant_tweets.append(tweet)
         return relevant_tweets
